@@ -14,3 +14,22 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+# Hi, I'm Afzal Ahmed 👋
+
+I'm a Software Engineer (aka `codelabuk`) with 12 years of experience in backend systems, Big Data platforms, and cloud-native architectures.
+
+### 🛠️ Technologies I Use
+- Java | Spring Boot | WebFlux
+- Kafka | Apache Spark | Data Lakes
+- Azure | Kubernetes | CI/CD
+- PostgreSQL | HBase | ClickHouse
+
+### 🚀 What I'm Building
+Currently building real-time data platforms and reactive APIs to power scalable analytics applications.
+
+### 📫 Connect with Me
+- LinkedIn: [Afzal Ahmed](https://www.linkedin.com/in/afzal-ahmed-a1205511b/)
+- GitHub: [@codelabuk](https://github.com/codelabuk)
+
