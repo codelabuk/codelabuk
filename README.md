@@ -26,6 +26,9 @@ I'm a Software Engineer (aka `codelabuk`) with 12 years of experience in backend
 - Azure | Kubernetes | CI/CD
 - PostgreSQL | HBase | ClickHouse
 
+### 🧠 Languages Used in My Repositories
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=codelabuk&layout=compact&theme=tokyonight)
+
 ### 🚀 What I'm Building
 Currently building real-time data platforms and reactive APIs to power scalable analytics applications.
 
