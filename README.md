@@ -32,6 +32,10 @@ I'm a Software Engineer (aka `codelabuk`) with 12 years of experience in backend
 ### 🚀 What I'm Building
 Currently building real-time data platforms and reactive APIs to power scalable analytics applications.
 
+### 🚀 Profile Views
+![Profile views](https://komarev.com/ghpvc/?username=your-github-username&color=green)
+
+
 ### 📫 Connect with Me
 - LinkedIn: [Afzal Ahmed](https://www.linkedin.com/in/afzal-ahmed-a1205511b/)
 - GitHub: [@codelabuk](https://github.com/codelabuk)
