@@ -18,13 +18,15 @@ Here are some ideas to get you started:
 
 # Hi, I'm Afzal Ahmed 👋
 
-I'm a Software Engineer (aka `codelabuk`) with 12 years of experience in backend systems, Big Data platforms, and cloud-native architectures.
+I'm a Software Engineer (aka `codelabuk`) with 12 years of experience in  Big Data platforms, backend systems and cloud-native architectures.
 
-### 🛠️ Technologies I Use
-- Java | Spring Boot | WebFlux
-- Kafka | Apache Spark | Data Lakes
-- Azure | Kubernetes | CI/CD
-- PostgreSQL | HBase | ClickHouse
+### 🛠️ Technologies I have worked on 
+- Java | Spring Boot | Python | Scala 
+- Big Data | Apache Spark | Kafka | Data Lakes | Hadoop  
+- Azure | Kubernetes | CI/CD | Helm | Jenkins
+- PostgreSQL | HBase | ClickHouse | OLAP Cube
+- Microservices | API Gateway
+- Maven | Git | SBT
 
 
 ### 📫 Connect with Me
