@@ -23,8 +23,6 @@ Distributed systems engineer who builds data infrastructure — Apache Arrow Fli
 ### 🔹 [labuk-query-engine](https://github.com/codelabuk/labuk-query-engine)
 Arrow Flight serving layer over Apache Iceberg — HadoopCatalog on MinIO, Scala/SBT, four-module structure. K8s manifests, seed scripts, and a demo client included.
 
-### 🔹 [notification-platform](https://github.com/codelabuk/notification-platform)
-A reactive, event-driven data platform rebuilt as a portfolio artifact: Spark Structured Streaming, Kafka, Akka Persistence, Pekko HTTP, and Spark Operator CRDs across a five-module pipeline (Akka processor → Spark analytics → Airflow DAG → Arrow Flight server).
 
 ### 🔹 [labuk-data-platform](https://github.com/codelabuk/labuk-data-platform)
 Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, ClickHouse, ZIO — deployed on OCI Kubernetes.
@@ -39,4 +37,4 @@ Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, C
 
 ---
 
-📍 Bangalore, India · [LinkedIn](#) · afzal232@gmail.com
+📍 Bangalore, India · [LinkedIn](https://www.linkedin.com/in/afzal-ahmed-a1205511b/) · afzal232@gmail.com
