@@ -34,7 +34,8 @@ Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, C
 
 ## Stack
 
-`Apache Spark` `Apache Kafka` `Apache Arrow Flight` `Apache Iceberg` `Delta Lake` `Apache Airflow` 'Modern Lakehouse' `Kubernetes` `Akka/Pekko` `ClickHouse` `Java` `Scala` `Python`
+`Apache Spark` `Apache Kafka` `Apache Arrow Flight` `Apache Iceberg` `Delta Lake` `Apache Airflow` 'Modern Lakehouse` `Kubernetes` `Apache Flink` `ClickHouse` `Java` `Scala` `Python`  
+`Azure` `AWS` `Microservices` `Spring Boot` `Akka/Pekko` `PySpark` 
 
 ---
 
