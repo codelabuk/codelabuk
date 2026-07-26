@@ -6,7 +6,7 @@
 
 <p align="left">
   <img src="https://img.shields.io/badge/13%2B%20years-Software%20Engineering-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/7%2B%20years-Data%20Platforms%20@%20Finance domain-informational?style=flat-square" />
+  <img src="https://img.shields.io/badge/7%2B%20years-Data%20Platforms%20@%20Finance%20domain-informational?style=flat-square" />
   <img src="https://img.shields.io/badge/Currently-Technical%20Lead%20@%20BNP%20Paribas-critical?style=flat-square" />
 </p>
 
@@ -18,35 +18,69 @@ Currently a Technical Lead at BNP Paribas, building a lakehouse-architecture dat
 
 ## What I work on
 
-🔹 **Columnar transport & serving layers**
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🔹 Columnar transport & serving layers**
 Arrow Flight servers, record batch pipelines, FieldVector population, low-latency OLAP/API serving on top of Iceberg and Delta Lake.
 
-🔹 **Event-driven data pipelines**
+</td>
+<td width="50%" valign="top">
+
+**🔹 Event-driven data pipelines**
 Kafka-orchestrated multi-stage pipelines (notification → orchestration → versioning → serving), Spark Structured Streaming, exactly-once semantics.
 
-🔹 **Platform migration & re-architecture**
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**🔹 Platform migration & re-architecture**
 TB-scale on-prem Hadoop → cloud-native (Azure/AWS), zero data loss, resilience patterns for stateful in-memory OLAP (auto-reload on pod restart).
 
-🔹 **Backend & service reliability**
-Microservices on Spring Boot, REST/gRPC API design, circuit-breaker/retry/bulkhead resilience patterns, Redis caching layers, API gateway routing, and load/performance testing with Gatling before rollout.
+</td>
+<td width="50%" valign="top">
+
+**🔹 Backend & service reliability**
+Microservices on Spring Boot, REST/gRPC API design, circuit-breaker/retry/bulkhead resilience patterns, Redis caching layers, API gateway routing, load/performance testing with Gatling before rollout.
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## Featured projects
 
+<table>
+<tr>
+<td width="50%" valign="top">
+
 ### 🔹 [labuk-query-engine](https://github.com/codelabuk/labuk-query-engine)
 Arrow Flight serving layer over Apache Iceberg — HadoopCatalog on MinIO, Scala/SBT, four-module structure. K8s manifests, seed scripts, and a demo client included.
+
 <img src="https://img.shields.io/badge/Arrow%20Flight-Iceberg-orange?style=flat-square" /> <img src="https://img.shields.io/badge/Scala-SBT-red?style=flat-square" />
+
+</td>
+<td width="50%" valign="top">
 
 ### 🔹 [labuk-data-platform](https://github.com/codelabuk/labuk-data-platform)
 Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, ClickHouse, ZIO — deployed on local Kubernetes.
+
 <img src="https://img.shields.io/badge/Lakehouse-Kafka%20%7C%20Spark%20%7C%20Iceberg-blueviolet?style=flat-square" /> <img src="https://img.shields.io/badge/K8s-Local%20Cluster-326CE5?style=flat-square" />
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## Stack
 
-**Data Platform**
+**Data platform** — columnar transport, streaming, lakehouse formats
+
+
 
 <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" />
 <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" />
@@ -57,7 +91,7 @@ Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, C
 <img src="https://img.shields.io/badge/Apache%20Flink-E6526F?style=for-the-badge&logo=apacheflink&logoColor=white" />
 <img src="https://img.shields.io/badge/ClickHouse-FFCC01?style=for-the-badge&logo=clickhouse&logoColor=black" />
 
-**Backend & Reliability**
+**Backend & reliability** — services, resilience, load testing
 
 <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
 <img src="https://img.shields.io/badge/Microservices-4B8BBE?style=for-the-badge" />
@@ -66,13 +100,13 @@ Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, C
 <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
 <img src="https://img.shields.io/badge/Gatling-Load%20Testing-FF9E2A?style=for-the-badge" />
 
-**Cloud & Infra**
+**Cloud & infra** — orchestration and deployment targets
 
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
 <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
 <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
 
-**Languages**
+**Languages** — primary and data-processing languages
 
 <img src="https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white" />
 <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" />
