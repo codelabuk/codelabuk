@@ -65,7 +65,7 @@ Arrow Flight serving layer over Apache Iceberg — HadoopCatalog on MinIO, Scala
 </td>
 <td width="50%" valign="top">
 
-### 🔹 [labuk-data-platform](https://github.com/codelabuk/labuk-data-platform)    ### 🔹 [labuk-infra-platform](https://github.com/codelabuk/labuk-infra-platform)
+### 🔹 [labuk-data-platform](https://github.com/codelabuk/labuk-data-platform)   🔹 [labuk-infra-platform](https://github.com/codelabuk/labuk-infra-platform)
 Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, ClickHouse, ZIO — deployed on local Kubernetes.
 
 <img src="https://img.shields.io/badge/Lakehouse-Kafka%20%7C%20Spark%20%7C%20Iceberg-blueviolet?style=flat-square" /> <img src="https://img.shields.io/badge/K8s-Local%20Cluster-326CE5?style=flat-square" />
