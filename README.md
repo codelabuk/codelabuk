@@ -6,7 +6,7 @@
 
 <p align="left">
   <img src="https://img.shields.io/badge/13%2B%20years-Software%20Engineering-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/7%2B%20years-Data%20Platforms%20@%20FinServ-informational?style=flat-square" />
+  <img src="https://img.shields.io/badge/7%2B%20years-Data%20Platforms%20@%20Finance domain-informational?style=flat-square" />
   <img src="https://img.shields.io/badge/Currently-Technical%20Lead%20@%20BNP%20Paribas-critical?style=flat-square" />
 </p>
 
