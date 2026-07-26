@@ -81,19 +81,6 @@ Full lakehouse stack — Kafka, Spark, Iceberg, Delta Lake, Arrow Flight DaaS, C
 
 ---
 
-## GitHub Activity
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=codelabuk&show_icons=true&theme=default&hide_border=true" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=codelabuk&hide_border=true" height="165" />
-</p>
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codelabuk&layout=compact&hide_border=true" height="165" />
-</p>
-
----
-
 <p align="left">
   📍 Bangalore, India &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/afzal-ahmed-a1205511b/">LinkedIn</a> &nbsp;·&nbsp;
