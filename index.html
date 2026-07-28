@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afzal Ahmed | Distributed Systems Engineer</title>
+<meta name="description" content="Afzal Ahmed — distributed systems engineer building data infrastructure: Kafka, Spark, Delta Lake, Iceberg, and Apache Arrow Flight.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e16;
+    --surface:#10151f;
+    --surface-2:#161c29;
+    --line:#232b3a;
+    --line-soft:#1a2130;
+    --text:#e7ecf3;
+    --text-muted:#8592a6;
+    --text-faint:#586376;
+    --accent:#c9a227;
+    --accent-soft:#8a7220;
+    --accent-wash:rgba(201,162,39,0.08);
+    --radius:3px;
+    --max:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 100% 120px, 120px 100%;
+    background-position: 0 0;
+    background-attachment: fixed;
+  }
+
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  a{color:inherit; text-decoration:none;}
+
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter: blur(10px);
+    background:rgba(10,14,22,0.82);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-name{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; font-size:15px; letter-spacing:0.02em;
+  }
+  .nav-links{display:flex; gap:28px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:0.08em;}
+  .nav-links a{color:var(--text-muted); transition:color .15s ease; position:relative;}
+  .nav-links a:hover, .nav-links a:focus-visible{color:var(--accent);}
+
+  /* EYEBROW / FIELD LABEL */
+  .field{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--accent);
+    letter-spacing:0.06em;
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .field::before{content:'§'; color:var(--accent-soft);}
+  .field .type{color:var(--text-faint);}
+
+  section{padding:76px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+
+  /* HERO */
+  .hero{padding:88px 0 64px;}
+  .hero-grid{
+    display:grid; grid-template-columns: 1.5fr 1fr; gap:48px; align-items:start;
+  }
+  .hero h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(34px, 5vw, 52px);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin-bottom:10px;
+  }
+  .hero .role{
+    font-family:'Space Grotesk', sans-serif;
+    color:var(--accent);
+    font-size:17px;
+    font-weight:500;
+    margin-bottom:22px;
+  }
+  .hero p.bio{
+    color:var(--text-muted);
+    max-width:56ch;
+    font-size:15.5px;
+  }
+  .hero .socials{
+    display:flex; gap:22px; margin-top:28px;
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+  }
+  .hero .socials a{
+    color:var(--text-muted); border-bottom:1px solid var(--line);
+    padding-bottom:2px; transition: all .15s ease;
+  }
+  .hero .socials a:hover{color:var(--accent); border-color:var(--accent);}
+
+  /* schema card - signature element */
+  .schema-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    line-height:1.9;
+    color:var(--text-muted);
+    position:relative;
+    overflow:hidden;
+  }
+  .schema-card::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, var(--accent), transparent 70%);
+  }
+  .schema-card .schema-title{
+    color:var(--text-faint); font-size:11px; text-transform:uppercase; letter-spacing:0.1em;
+    margin-bottom:12px;
+  }
+  .schema-card .row{white-space:pre;}
+  .schema-card .key{color:var(--text);}
+  .schema-card .val{color:var(--accent);}
+  .schema-card .branch{color:var(--text-faint);}
+
+  /* SECTION HEADERS */
+  h2.section-title{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:24px; font-weight:600; margin-bottom:36px;
+    letter-spacing:-0.01em;
+  }
+
+  /* EXPERIENCE */
+  .exp-item{
+    display:grid; grid-template-columns: 200px 1fr; gap:28px;
+    padding:26px 0; border-top:1px solid var(--line-soft);
+  }
+  .exp-item:first-of-type{border-top:none;}
+  .exp-meta{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--text-faint); line-height:1.7;}
+  .exp-meta .dates{color:var(--text-muted); display:block; margin-top:4px;}
+  .exp-body h3{
+    font-family:'Space Grotesk', sans-serif; font-size:17px; font-weight:600; margin-bottom:4px;
+  }
+  .exp-body .exp-role{color:var(--accent); font-size:13.5px; margin-bottom:12px; font-family:'IBM Plex Mono',monospace;}
+  .exp-body ul{list-style:none; color:var(--text-muted); font-size:14.5px;}
+  .exp-body li{position:relative; padding-left:16px; margin-bottom:7px;}
+  .exp-body li::before{content:'—'; position:absolute; left:0; color:var(--text-faint);}
+
+  /* PROJECTS */
+  .proj-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .proj-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .proj-card:hover{border-color:var(--accent-soft); transform:translateY(-2px);}
+  .proj-card h3{
+    font-family:'Space Grotesk', sans-serif; font-size:16px; font-weight:600; margin-bottom:9px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .proj-card h3 .arrow{color:var(--accent); font-size:14px;}
+  .proj-card p{color:var(--text-muted); font-size:13.8px; margin-bottom:12px;}
+  .proj-tags{display:flex; flex-wrap:wrap; gap:6px;}
+  .proj-tags span{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--text-faint);
+    border:1px solid var(--line); padding:3px 7px; border-radius:2px; letter-spacing:0.02em;
+  }
+
+  /* WRITING */
+  .post-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:16px 0; border-top:1px solid var(--line-soft);
+    gap:20px;
+  }
+  .post-row:first-of-type{border-top:none;}
+  .post-row .post-title{font-size:15.5px; transition:color .15s ease;}
+  .post-row:hover .post-title{color:var(--accent);}
+  .post-row .post-date{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-faint); white-space:nowrap;}
+  .note{color:var(--text-faint); font-size:13px; margin-top:20px; font-family:'IBM Plex Mono', monospace;}
+
+  /* STACK */
+  .stack-grid{display:flex; flex-wrap:wrap; gap:10px;}
+  .stack-chip{
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+    border:1px solid var(--line); background:var(--surface);
+    padding:8px 14px; border-radius:2px; color:var(--text-muted);
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .stack-chip:hover{border-color:var(--accent); color:var(--text);}
+
+  footer{padding:40px 0 60px; text-align:center;}
+  footer .wrap{display:flex; flex-direction:column; align-items:center; gap:14px;}
+  footer .foot-links{display:flex; gap:22px; font-family:'IBM Plex Mono', monospace; font-size:12.5px;}
+  footer .foot-links a{color:var(--text-muted);}
+  footer .foot-links a:hover{color:var(--accent);}
+  footer .copyright{color:var(--text-faint); font-size:12px; font-family:'IBM Plex Mono', monospace;}
+
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+    .proj-card:hover{transform:none;}
+  }
+
+  @media (max-width: 760px){
+    .hero-grid{grid-template-columns:1fr;}
+    .proj-grid{grid-template-columns:1fr;}
+    .exp-item{grid-template-columns:1fr; gap:8px;}
+    .nav-links{gap:16px;}
+    section{padding:52px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-name mono">Afzal Ahmed</div>
+    <nav class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="#stack">Stack</a>
+      <a href="https://github.com/codelabuk" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>Afzal Ahmed</h1>
+        <div class="role">Distributed Systems Engineer · Data Infrastructure</div>
+        <p class="bio">
+          I build the infrastructure that moves data at scale — Kafka pipelines, Spark jobs, and Arrow Flight
+          services that get bytes from disk to memory to network without a JSON layer in between. 13+ years in
+          software, the last 7 spent entirely on distributed data platforms: lakehouse internals, streaming
+          systems, and zero-copy data access.
+        </p>
+        <div class="socials">
+          <a href="https://github.com/codelabuk" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://codelabuk.hashnode.dev" target="_blank" rel="noopener">Blog</a>
+          <a href="#" id="resume-link">Resume</a>
+        </div>
+      </div>
+      <div class="schema-card reveal">
+        <div class="schema-title">// record: engineer</div>
+        <div class="row"><span class="branch">├─</span> <span class="key">role</span>      <span class="val">distributed-systems</span></div>
+        <div class="row"><span class="branch">├─</span> <span class="key">focus</span>     <span class="val">data-infrastructure</span></div>
+        <div class="row"><span class="branch">├─</span> <span class="key">exp</span>       <span class="val">13y (7y data)</span></div>
+        <div class="row"><span class="branch">├─</span> <span class="key">current</span>   <span class="val">arrow flight / delta / kafka</span></div>
+        <div class="row"><span class="branch">└─</span> <span class="key">based</span>     <span class="val">bangalore, in</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <div class="field">experience <span class="type">:: Array&lt;Role&gt;</span></div>
+    <h2 class="section-title">Where I've built this</h2>
+
+    <div class="exp-item">
+      <div class="exp-meta">BNP Paribas ISPL<span class="dates">Bangalore · Current</span></div>
+      <div class="exp-body">
+        <h3>Financial Data Platform</h3>
+        <div class="exp-role">Technical Lead</div>
+        <ul>
+          <li>Core design and build of an Apache Arrow Flight Data-as-a-Service layer serving positions and inventory data straight from memory, cutting the serialization step out of the query path</li>
+          <li>Lead engineer on the platform's data infrastructure — streaming, orchestration, and lakehouse storage underneath the rehypothecation workflow</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">Societe Generale GSC<span class="dates">Prior role</span></div>
+      <div class="exp-body">
+        <h3>Real-Time Risk Analytics Platform</h3>
+        <div class="exp-role">Data Platform Engineer</div>
+        <ul>
+          <li>Built a real-time risk analytics platform computing VaR and Stressed ES at terabyte scale</li>
+          <li>Reactive, streaming-first architecture — the foundation the notification-platform portfolio project is rebuilt from</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">TCS · ASAP InfoSystem · CGI<span class="dates">Earlier · ~6 years</span></div>
+      <div class="exp-body">
+        <h3>Java / Spring Boot Backend Engineering</h3>
+        <div class="exp-role">Software Engineer</div>
+        <ul>
+          <li>Six years building backend systems in Java and Spring Boot before pivoting into distributed data platforms</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <div class="field">projects <span class="type">:: Array&lt;Build&gt;</span></div>
+    <h2 class="section-title">What I build when nobody's asking</h2>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <h3><span class="arrow">▸</span> delta-flight-engine</h3>
+        <p>A from-scratch Delta Lake read engine — own commit-log parsing, multi-level predicate pushdown, Parquet-to-Arrow decode, served over Arrow Flight. No DuckDB in the read path, on purpose.</p>
+        <div class="proj-tags"><span>Java</span><span>Arrow</span><span>Delta Lake</span></div>
+      </div>
+
+      <div class="proj-card">
+        <h3><span class="arrow">▸</span> labuk-query-engine</h3>
+        <p>An OLAP serving layer: Arrow Flight over Apache Iceberg, with a HadoopCatalog on MinIO underneath. Four-module Scala/SBT build with a working demo client.</p>
+        <div class="proj-tags"><span>Scala</span><span>Iceberg</span><span>Arrow Flight</span></div>
+      </div>
+
+      <div class="proj-card">
+        <h3><span class="arrow">▸</span> labuk-careerlens</h3>
+        <p>An AI-powered job search aggregation platform. Kafka and Iceberg medallion layers feed LLM-based entity extraction and pgvector matching, orchestrated end to end.</p>
+        <div class="proj-tags"><span>Kafka</span><span>Iceberg</span><span>pgvector</span></div>
+      </div>
+
+      <div class="proj-card">
+        <h3><span class="arrow">▸</span> notification-platform</h3>
+        <p>A production reactive notification platform rebuilt from memory as a portfolio artifact — Spark Structured Streaming, Kafka, Akka Persistence, and Pekko HTTP across five modules.</p>
+        <div class="proj-tags"><span>Akka</span><span>Kafka</span><span>Spark Streaming</span></div>
+      </div>
+
+      <div class="proj-card">
+        <h3><span class="arrow">▸</span> local-lakehouse-lab</h3>
+        <p>A local lakehouse built up from a simple log-filtering Spark job — Delta Lake writes, a DuckDB/Arrow query layer, and a live Kafka streaming extension on top.</p>
+        <div class="proj-tags"><span>Spark</span><span>Delta Lake</span><span>DuckDB</span></div>
+      </div>
+
+      <div class="proj-card">
+        <h3><span class="arrow">▸</span> arrow-shuffle-bench</h3>
+        <p>A benchmark pitting Spark's disk-based shuffle against Arrow Flight memory-to-memory shuffle, including a chaos experiment on recovery cost asymmetry.</p>
+        <div class="proj-tags"><span>Arrow Flight</span><span>Spark</span><span>Benchmarking</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="writing" class="reveal">
+    <div class="field">writing <span class="type">:: Array&lt;Post&gt;</span></div>
+    <h2 class="section-title">Notes on how it actually works</h2>
+
+    <div class="post-row">
+      <a class="post-title" href="https://codelabuk.hashnode.dev" target="_blank" rel="noopener">Arrow Flight Serialization: Bridging High-Performance Computing with Data Access</a>
+      <span class="post-date">Hashnode</span>
+    </div>
+    <div class="post-row">
+      <a class="post-title" href="https://codelabuk.hashnode.dev" target="_blank" rel="noopener">Arrow Flight Deep Series — how Flight serialization actually works</a>
+      <span class="post-date">In progress</span>
+    </div>
+
+    <div class="note">→ read more at codelabuk.hashnode.dev</div>
+  </section>
+
+  <section id="stack" class="reveal">
+    <div class="field">stack <span class="type">:: Array&lt;Tech&gt;</span></div>
+    <h2 class="section-title">Tools of the trade</h2>
+    <div class="stack-grid">
+      <span class="stack-chip">Apache Kafka</span>
+      <span class="stack-chip">Apache Spark</span>
+      <span class="stack-chip">Apache Arrow / Flight</span>
+      <span class="stack-chip">Delta Lake</span>
+      <span class="stack-chip">OLAP</span>
+      <span class="stack-chip">Apache Iceberg</span>
+      <span class="stack-chip">Apache Airflow</span>
+      <span class="stack-chip">ClickHouse</span>
+      <span class="stack-chip">AWS</span>
+      <span class="stack-chip">Azure</span>
+      <span class="stack-chip">Kubernetes</span>
+      <span class="stack-chip">Docker</span>
+      <span class="stack-chip">Java</span>
+      <span class="stack-chip">Scala</span>
+      <span class="stack-chip">Python</span>
+      <span class="stack-chip">Microservice</span>
+      <span class="stack-chip">API Gateway</span>
+      <span class="stack-chip">Spring Boot</span>
+      <span class="stack-chip">Gatling</span>
+      <span class="stack-chip">Prometheus</span>
+      <span class="stack-chip">Grafana</span>
+      <span class="stack-chip">LLM</span>
+      <span class="stack-chip">RAG</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="https://github.com/codelabuk" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://codelabuk.hashnode.dev" target="_blank" rel="noopener">Blog</a>
+    </div>
+    <div class="copyright">© 2026 Afzal Ahmed</div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
